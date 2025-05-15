@@ -117,7 +117,7 @@ class SplashPage3 extends StatelessWidget {
                   child: Button(
                     w: 100,
                     h: 38,
-                    fungsi: () => Get.toNamed(Routes.HOME),
+                    fungsi: () => Get.toNamed(Routes.LOGIN),
                     nama: "Ayo",
                     // Navigasi ke halaman berikutnya
                   ),

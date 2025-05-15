@@ -4,12 +4,14 @@ import 'package:flutter/widgets.dart';
 
 class Input extends StatelessWidget {
   double w, h;
+  bool cekPassword;
   String icon, labelInput;
   TextEditingController cs;
   Input({
     super.key,
     required this.w,
     required this.h,
+    required this.cekPassword,
     required this.icon,
     required this.cs,
     required this.labelInput,
