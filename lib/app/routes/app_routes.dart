@@ -15,6 +15,11 @@ abstract class Routes {
   static const SCAN = _Paths.SCAN;
   static const MAIN = _Paths.MAIN;
   static const LOGIN = _Paths.LOGIN;
+  static const REGISTER_PAGE = _Paths.REGISTER_PAGE;
+  static const RESET_PASSWORD_C = _Paths.RESET_PASSWORD_C;
+  static const RESET_PASSWORD_PB = _Paths.RESET_PASSWORD_PB;
+  static const RESET_PASSWORD_E = _Paths.RESET_PASSWORD_E;
+  static const HOME_PAGE = _Paths.HOME_PAGE;
 }
 
 abstract class _Paths {
@@ -31,4 +36,9 @@ abstract class _Paths {
   static const SCAN = '/scan';
   static const MAIN = '/main';
   static const LOGIN = '/login';
+  static const REGISTER_PAGE = '/register-page';
+  static const RESET_PASSWORD_C = '/reset-password-c';
+  static const RESET_PASSWORD_PB = '/reset-password-pb';
+  static const RESET_PASSWORD_E = '/reset-password-e';
+  static const HOME_PAGE = '/home-page';
 }

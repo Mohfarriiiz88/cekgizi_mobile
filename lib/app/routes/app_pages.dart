@@ -6,18 +6,28 @@ import '../modules/editProfile/bindings/edit_profile_binding.dart';
 import '../modules/editProfile/views/edit_profile_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/home_page/bindings/home_page_binding.dart';
+import '../modules/home_page/views/home_page_view.dart';
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
 import '../modules/profile/bindings/profile_binding.dart';
 import '../modules/profile/views/profile_view.dart';
+import '../modules/register_page/bindings/register_page_binding.dart';
+import '../modules/register_page/views/register_page_view.dart';
+import '../modules/reset_password_c/bindings/reset_password_c_binding.dart';
+import '../modules/reset_password_c/views/reset_password_c_view.dart';
+import '../modules/reset_password_e/bindings/reset_password_e_binding.dart';
+import '../modules/reset_password_e/views/reset_password_e_view.dart';
+import '../modules/reset_password_pb/bindings/reset_password_pb_binding.dart';
+import '../modules/reset_password_pb/views/reset_password_pb_view.dart';
 import '../modules/scan/bindings/scan_binding.dart';
 import '../modules/scan/views/scan_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/loading.dart';
-import '../modules/splash/views/splash_view.dart';
 import '../modules/splash/views/splash_page_1.dart';
 import '../modules/splash/views/splash_page_2.dart';
 import '../modules/splash/views/splash_page_3.dart';
+import '../modules/splash/views/splash_view.dart';
 
 part 'app_routes.dart';
 
@@ -79,8 +89,33 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.LOGIN,
-      page: () => const LoginView(),
+      page: () => LoginView(),
       binding: LoginBinding(),
+    ),
+    GetPage(
+      name: _Paths.REGISTER_PAGE,
+      page: () => const RegisterPageView(),
+      binding: RegisterPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.RESET_PASSWORD_C,
+      page: () => const ResetPasswordCView(),
+      binding: ResetPasswordCBinding(),
+    ),
+    GetPage(
+      name: _Paths.RESET_PASSWORD_PB,
+      page: () => const ResetPasswordPbView(),
+      binding: ResetPasswordPbBinding(),
+    ),
+    GetPage(
+      name: _Paths.RESET_PASSWORD_E,
+      page: () => const ResetPasswordEView(),
+      binding: ResetPasswordEBinding(),
+    ),
+    GetPage(
+      name: _Paths.HOME_PAGE,
+      page: () => const HomePageView(),
+      binding: HomePageBinding(),
     ),
   ];
 }

@@ -97,10 +97,12 @@ class EditProfileView extends StatelessWidget {
                         h: 40,
                         icon: "assets/nama.png",
                         cs: namaC,
+                        cekPassword: false,
                         labelInput: "Nama",
                       ),
                       Input(
                         w: double.infinity,
+                        cekPassword: false,
                         h: 40,
                         icon: "assets/email.png",
                         cs: emailC,
@@ -109,6 +111,7 @@ class EditProfileView extends StatelessWidget {
                       Input(
                         w: double.infinity,
                         h: 40,
+                        cekPassword: false,
                         icon: "assets/telp.png",
                         cs: telpC,
                         labelInput: "No Telp",
@@ -116,6 +119,7 @@ class EditProfileView extends StatelessWidget {
                       Input(
                         w: double.infinity,
                         h: 40,
+                        cekPassword: false,
                         icon: "assets/lokasiitem.png",
                         cs: alamatC,
                         labelInput: "Alamat",
