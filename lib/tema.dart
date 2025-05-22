@@ -13,7 +13,6 @@ Color warnaPutih = const Color(0xFFFFFFFF);
 Color warnaAbu2 = Color(0xffEBEBEB);
 
 // );
-
 /// TEXT STYLE
 TextStyle hitamStyle = GoogleFonts.roboto(color: warnaHitam);
 TextStyle biruStyle = GoogleFonts.roboto(color: warnaBiru);

@@ -1,0 +1,1 @@
+ D:\\SMS\ 6\\capstone\\mobile\\cekgizi_mobile\\.dart_tool\\flutter_build\\586d2aebbf7839caa0f854cc6b35aaee\\native_assets.json: 
