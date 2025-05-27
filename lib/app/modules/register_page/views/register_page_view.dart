@@ -12,7 +12,6 @@ class RegisterPageView extends GetView<RegisterPageController> {
   const RegisterPageView({super.key});
   @override
   Widget build(BuildContext context) {
-    TextEditingController cs = TextEditingController();
     Widget bagianAtas() {
       return Container(
         width: MediaQuery.of(context).size.width,
@@ -48,7 +47,7 @@ class RegisterPageView extends GetView<RegisterPageController> {
               icon: "assets/user.png",
               labelInput: "Nama",
               h: 50,
-              cs: cs,
+              cs: controller.nameController,
             ),
             Input(
               cekPassword: true,
@@ -56,7 +55,7 @@ class RegisterPageView extends GetView<RegisterPageController> {
               icon: "assets/email.png",
               labelInput: "Email",
               h: 50,
-              cs: cs,
+              cs: controller.emailController,
             ),
 
             Input(
@@ -65,7 +64,7 @@ class RegisterPageView extends GetView<RegisterPageController> {
               icon: "assets/call.png",
               labelInput: "Nomer Telepon",
               h: 50,
-              cs: cs,
+              cs: controller.nomerTeleponC,
             ),
             Input(
               cekPassword: true,
@@ -73,11 +72,23 @@ class RegisterPageView extends GetView<RegisterPageController> {
               icon: "assets/lock.png",
               labelInput: "Kata Sandi",
               h: 50,
-              cs: cs,
+              cs: controller.passwordController,
             ),
 
             SizedBox(height: 18),
-            Button(w: double.infinity, h: 50, nama: "Register", fungsi: () {}),
+            Button(
+              w: double.infinity,
+              h: 50,
+              nama: "Register",
+              fungsi: () async {
+                await controller.buatAkun(
+                  controller.emailController.text,
+                  controller.passwordController.text,
+                  controller.nomerTeleponC.text,
+                  controller.nameController.text,
+                );
+              },
+            ),
           ],
         ),
       );

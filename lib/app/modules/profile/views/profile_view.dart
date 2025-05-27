@@ -1,31 +1,19 @@
+import 'package:cekgizi_mobile/app/modules/profile/controllers/profile_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:cekgizi_mobile/tema.dart';
 import 'package:cekgizi_mobile/app/routes/app_pages.dart';
-import 'package:cekgizi_mobile/app/widget/CustomNavbar.dart';
+
 import 'package:get/get.dart';
 
-class ProfilView extends StatefulWidget {
-  const ProfilView({super.key});
-
-  @override
-  State<ProfilView> createState() => _ProfilViewState();
-}
-
-class _ProfilViewState extends State<ProfilView> {
+class ProfilView extends GetView<ProfileController> {
+  ProfilView({super.key});
   int selectedIndex = 2;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: warnaPutih,
-      bottomNavigationBar: CustomNavbar(
-        currentIndex: selectedIndex,
-        onTap: (index) {
-          setState(() {
-            selectedIndex = index;
-          });
-        },
-      ),
+
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

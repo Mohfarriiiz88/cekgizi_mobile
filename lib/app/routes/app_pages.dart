@@ -1,3 +1,4 @@
+import 'package:cekgizi_mobile/app/data/middleware/auth.dart';
 import 'package:get/get.dart';
 
 import '../modules/detailProfile/bindings/detail_profile_binding.dart';
@@ -10,6 +11,8 @@ import '../modules/home_page/bindings/home_page_binding.dart';
 import '../modules/home_page/views/home_page_view.dart';
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
+import '../modules/mainpages/bindings/mainpages_binding.dart';
+import '../modules/mainpages/views/mainpages_view.dart';
 import '../modules/profile/bindings/profile_binding.dart';
 import '../modules/profile/views/profile_view.dart';
 import '../modules/register_page/bindings/register_page_binding.dart';
@@ -22,19 +25,23 @@ import '../modules/reset_password_pb/bindings/reset_password_pb_binding.dart';
 import '../modules/reset_password_pb/views/reset_password_pb_view.dart';
 import '../modules/scan/bindings/scan_binding.dart';
 import '../modules/scan/views/scan_view.dart';
+import '../modules/scan_pages/bindings/scan_pages_binding.dart';
+import '../modules/scan_pages/views/scan_pages_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/loading.dart';
 import '../modules/splash/views/splash_page_1.dart';
 import '../modules/splash/views/splash_page_2.dart';
 import '../modules/splash/views/splash_page_3.dart';
 import '../modules/splash/views/splash_view.dart';
+import '../modules/verifikasi_email/bindings/verifikasi_email_binding.dart';
+import '../modules/verifikasi_email/views/verifikasi_email_view.dart';
 
 part 'app_routes.dart';
 
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.SPLASH;
+  static const INITIAL = Routes.HOME;
 
   static final routes = [
     GetPage(
@@ -116,6 +123,39 @@ class AppPages {
       name: _Paths.HOME_PAGE,
       page: () => const HomePageView(),
       binding: HomePageBinding(),
+    ),
+    GetPage(
+      name: _Paths.SCAN_PAGES,
+      page: () => const ScanPagesView(),
+      binding: ScanPagesBinding(),
+    ),
+    GetPage(
+      name: _Paths.VERIFIKASI_EMAIL,
+      page: () => const VerifikasiEmailView(),
+      binding: VerifikasiEmailBinding(),
+    ),
+    GetPage(
+      name: _Paths.MAINPAGES,
+      page: () => const MainpagesView(),
+      binding: MainpagesBinding(),
+      middlewares: [AuthMiddleware()],
+      children: [
+        GetPage(
+          name: _Paths.HOME_PAGE,
+          page: () => const HomePageView(),
+          binding: HomePageBinding(),
+        ),
+        GetPage(
+          name: _Paths.PROFIL,
+          page: () => ProfilView(),
+          binding: ProfileBinding(),
+        ),
+        GetPage(
+          name: _Paths.SCAN_PAGES,
+          page: () => const ScanPagesView(),
+          binding: ScanPagesBinding(),
+        ),
+      ],
     ),
   ];
 }

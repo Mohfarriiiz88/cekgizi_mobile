@@ -9,7 +9,6 @@ import 'package:get/get.dart';
 import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
-  TextEditingController cs = TextEditingController();
   LoginView({super.key});
   @override
   Widget build(BuildContext context) {
@@ -48,7 +47,7 @@ class LoginView extends GetView<LoginController> {
               icon: "assets/email.png",
               labelInput: "Email",
               h: 50,
-              cs: cs,
+              cs: controller.emailC,
             ),
             Input(
               cekPassword: true,
@@ -56,7 +55,7 @@ class LoginView extends GetView<LoginController> {
               icon: "assets/email.png",
               labelInput: "Password",
               h: 50,
-              cs: cs,
+              cs: controller.passC,
             ),
 
             Align(
@@ -77,8 +76,11 @@ class LoginView extends GetView<LoginController> {
               w: double.infinity,
               h: 50,
               nama: "Login",
-              fungsi: () {
-                Get.toNamed(Routes.HOME_PAGE);
+              fungsi: () async {
+                await controller.login(
+                  controller.emailC.text,
+                  controller.passC.text,
+                );
               },
             ),
           ],

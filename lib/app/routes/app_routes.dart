@@ -20,6 +20,9 @@ abstract class Routes {
   static const RESET_PASSWORD_PB = _Paths.RESET_PASSWORD_PB;
   static const RESET_PASSWORD_E = _Paths.RESET_PASSWORD_E;
   static const HOME_PAGE = _Paths.HOME_PAGE;
+  static const SCAN_PAGES = _Paths.SCAN_PAGES;
+  static const VERIFIKASI_EMAIL = _Paths.VERIFIKASI_EMAIL;
+  static const MAINPAGES = _Paths.MAINPAGES;
 }
 
 abstract class _Paths {
@@ -41,4 +44,7 @@ abstract class _Paths {
   static const RESET_PASSWORD_PB = '/reset-password-pb';
   static const RESET_PASSWORD_E = '/reset-password-e';
   static const HOME_PAGE = '/home-page';
+  static const SCAN_PAGES = '/scan-pages';
+  static const VERIFIKASI_EMAIL = '/verifikasi-email';
+  static const MAINPAGES = '/mainpages';
 }

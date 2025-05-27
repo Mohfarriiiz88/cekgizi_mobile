@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gcm_defaultSenderId" translatable="false">87614934016</string>
+    <string name="google_api_key" translatable="false">AIzaSyDuFzoSOnjTJzMMAXGOQhbgHo-vEZ7o6Qs</string>
+    <string name="google_app_id" translatable="false">1:87614934016:android:191570f2aa850331a7dce5</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDuFzoSOnjTJzMMAXGOQhbgHo-vEZ7o6Qs</string>
+    <string name="google_storage_bucket" translatable="false">gizi-app-dd4b8.firebasestorage.app</string>
+    <string name="project_id" translatable="false">gizi-app-dd4b8</string>
+</resources>
